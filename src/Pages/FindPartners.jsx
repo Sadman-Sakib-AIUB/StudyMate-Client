@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { Link } from "react-router";
 import useAxios from "../Hooks/useAxios";
 import { toast } from "react-toastify";
 import Navbar from "../Components/Navbar";
@@ -10,9 +10,9 @@ const FindPartners = () => {
   const [filteredPartners, setFilteredPartners] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
-  const [sortOrder, setSortOrder] = useState("desc"); // default: high rating first
+  const [sortOrder, setSortOrder] = useState("desc");
   const axiosInstance = useAxios();
-  const navigate = useNavigate();
+  
 
   useEffect(() => {
     const fetchPartners = async () => {

@@ -16,7 +16,6 @@ const Profile = () => {
     photoURL: "",
   });
 
-  // Load user data from MongoDB
   useEffect(() => {
     if (user?.email) {
       axiosInstance
