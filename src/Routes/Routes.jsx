@@ -9,6 +9,7 @@ import Login from "../Pages/Login";
 import CreateProfile from "../Pages/CreateProfile";
 import MyConnections from "../Pages/MyConnections";
 import Profile from "../Pages/Profile";
+import ErrorPage from "../Pages/ErrorPage";
 
 export const router = createBrowserRouter([
   {
@@ -70,4 +71,8 @@ export const router = createBrowserRouter([
       </PrivateRoute>
     ),
   },
+  {
+    path:'*',
+    element:<ErrorPage></ErrorPage>
+  }
 ]);
