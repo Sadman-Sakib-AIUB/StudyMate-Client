@@ -56,6 +56,9 @@ const PartnerDetails = () => {
         partnerName: partner.name,
         partnerEmail: partner.email,
         partnerPhoto: partner.photoURL,
+        partnerSubject: partner.subject,
+        partnerStudyMode: partner.studyMode,
+        partnerExpLevel: partner.experienceLevel,
         userEmail: user.email,
         sentAt: new Date(),
       };

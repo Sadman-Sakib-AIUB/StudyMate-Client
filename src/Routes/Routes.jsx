@@ -7,6 +7,7 @@ import PartnerDetails from "../Pages/PartnerDetails";
 import PrivateRoute from "../Providers/PrivateRoute";
 import Login from "../Pages/Login";
 import CreateProfile from "../Pages/CreateProfile";
+import MyConnections from "../Pages/MyConnections";
 
 export const router = createBrowserRouter([
   {
@@ -49,6 +50,14 @@ export const router = createBrowserRouter([
     element: (
       <PrivateRoute>
         <CreateProfile></CreateProfile>
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: "/myconnections",
+    element: (
+      <PrivateRoute>
+        <MyConnections></MyConnections>
       </PrivateRoute>
     ),
   },
