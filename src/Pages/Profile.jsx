@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import useAxios from "../Hooks/useAxios";
 import { toast, ToastContainer } from "react-toastify";
@@ -6,7 +6,7 @@ import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 
 const Profile = () => {
-  const { user, updateUser } = useContext(AuthContext);
+  const { user, updateUser } = use(AuthContext);
   const axiosInstance = useAxios();
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);

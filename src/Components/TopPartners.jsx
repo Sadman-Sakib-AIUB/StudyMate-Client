@@ -7,7 +7,6 @@ const TopPartners = () => {
   const [partners, setPartners] = useState([]);
   const [loading, setLoading] = useState(true);
   const axiosInstance = useAxios();
-  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchPartners = async () => {

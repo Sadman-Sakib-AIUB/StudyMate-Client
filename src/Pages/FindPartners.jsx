@@ -103,7 +103,7 @@ const FindPartners = () => {
                 </p>
                 <Link
                   className="btn btn-primary btn-sm"
-                  onClick={() => navigate(`/partner/${partner._id}`)}
+                  to={`/partner/${partner._id}`}
                 >
                   View Profile
                 </Link>

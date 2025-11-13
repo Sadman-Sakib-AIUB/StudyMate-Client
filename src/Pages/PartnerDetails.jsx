@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState, use } from "react";
 import { useParams, useNavigate } from "react-router";
 import useAxios from "../Hooks/useAxios";
 import { toast, ToastContainer } from "react-toastify";
@@ -7,7 +7,7 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
 const PartnerDetails = () => {
-  const { user } = useContext(AuthContext);
+  const { user } = use(AuthContext);
   const { id } = useParams();
   const [partner, setPartner] = useState(null);
   const [loading, setLoading] = useState(true);
