@@ -1,3 +1,89 @@
+# StudyMate — Find Your Perfect Study Partner
+# 📖 Preview ![alt text](home.jpeg)  This is a modern React-based web application
+
+**StudyMate** is a MERN Stack web platform designed to help students find and connect with study partners. Users can search for partners based on subjects, learning preferences, or location, making studying more interactive and goal-oriented.
+
+---
+
+## 🚀 Live Demo
+
+*(https://study-mate-a10.web.app)*  
+
+[Live Demo](#)
+
+---
+
+## 🛠 Tech Stack
+
+**Frontend:**  
+- React.js  
+- React Router  
+- Tailwind CSS  
+- DaisyUI  
+- React Icons  
+- AOS (for animations)  
+- React Toastify (for notifications)  
+
+**Backend:**  
+- Node.js  
+- Express.js  
+- MongoDB (Atlas)  
+- Axios (for API requests)  
+
+**Authentication:**  
+- Firebase Authentication (Email/Password + Google Sign-In)
+
+---
+
+## ✨ Key Features
+
+### Public Pages:
+- **Home Page** with banner slider, top-rated study partners, “How It Works”, and testimonials section.
+- **Find Partners**: View and search all available study partner profiles.
+- **Details Page**: Full profile view of a selected study partner (private route).
+
+### Authentication:
+- **User Registration & Login** with email/password.
+- **Google Social Sign-In**.
+- Password validation rules:  
+  - At least 1 uppercase letter  
+  - At least 1 lowercase letter  
+  - Minimum 6 characters
+
+### Logged-In User Features:
+- **Create Partner Profile**: Add personal study profile including name, subject, study mode, availability, location, experience level, and rating.  
+- **My Connections**: View, update, or delete sent partner requests.  
+- **Send Partner Request**: Increase partner count and add connection.  
+
+### UI/UX Features:
+- Responsive design using Tailwind CSS and DaisyUI.  
+- Smooth navigation using React Router (no reloads).  
+- Toast notifications for successful/failed actions.  
+- Loading spinner while fetching data.  
+- Creative error/404 page.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
