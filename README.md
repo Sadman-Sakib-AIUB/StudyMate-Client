@@ -6,10 +6,8 @@
 ---
 
 ## 🚀 Live Demo
-
-*(https://study-mate-a10.web.app)*  
-
-[Live Demo](#)
+  
+[Live Demo](https://study-mate-a10.web.app)
 
 ---
 
