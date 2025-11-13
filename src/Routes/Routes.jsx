@@ -8,6 +8,7 @@ import PrivateRoute from "../Providers/PrivateRoute";
 import Login from "../Pages/Login";
 import CreateProfile from "../Pages/CreateProfile";
 import MyConnections from "../Pages/MyConnections";
+import Profile from "../Pages/Profile";
 
 export const router = createBrowserRouter([
   {
@@ -58,6 +59,14 @@ export const router = createBrowserRouter([
     element: (
       <PrivateRoute>
         <MyConnections></MyConnections>
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: "/profile",
+    element: (
+      <PrivateRoute>
+        <Profile></Profile>
       </PrivateRoute>
     ),
   },

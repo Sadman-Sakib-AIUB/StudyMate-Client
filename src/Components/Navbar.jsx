@@ -24,6 +24,7 @@ const Navbar = () => {
         <>
           <li><NavLink to="/createprofile" className="font-semibold">Create Profile</NavLink></li>
           <li><NavLink to="/myconnections" className="font-semibold">My Connections</NavLink></li>
+          <li><NavLink to="/profile" className="font-semibold">Profile</NavLink></li>
         </>
       )}
     </>
