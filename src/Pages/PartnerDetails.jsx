@@ -1,8 +1,10 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useParams, useNavigate } from "react-router";
 import useAxios from "../Hooks/useAxios";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import { AuthContext } from "../Providers/AuthProvider";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 const PartnerDetails = () => {
   const { user } = useContext(AuthContext);
@@ -22,6 +24,7 @@ const PartnerDetails = () => {
     const fetchPartner = async () => {
       try {
         const res = await axiosInstance.get(`/partners/${id}`);
+        console.log(res);
         setPartner(res.data);
       } catch (err) {
         console.error(err);
@@ -83,44 +86,49 @@ const PartnerDetails = () => {
   }
 
   return (
-    <div className="py-10 px-4 md:px-20 bg-base-100">
-      <div className="max-w-4xl mx-auto bg-base-200 shadow-lg rounded-lg p-6 flex flex-col md:flex-row gap-6">
-        <img
-          src={partner.photoURL}
-          alt={partner.name}
-          className="w-48 h-48 rounded-full object-cover mx-auto md:mx-0"
-        />
-        <div className="flex-1">
-          <h2 className="text-3xl font-bold mb-2">{partner.name}</h2>
-          <p className="text-gray-600 mb-1">
-            <strong>Subject:</strong> {partner.subject}
-          </p>
-          <p className="text-gray-600 mb-1">
-            <strong>Study Mode:</strong> {partner.studyMode}
-          </p>
-          <p className="text-gray-600 mb-1">
-            <strong>Experience Level:</strong> {partner.experienceLevel}
-          </p>
-          <p className="text-gray-600 mb-1">
-            <strong>Availability:</strong> {partner.availability}
-          </p>
-          <p className="text-gray-600 mb-1">
-            <strong>Location:</strong> {partner.location || "N/A"}
-          </p>
-          <p className="text-yellow-500 font-semibold mb-3">
-            ⭐ {partner.rating.toFixed(1)}
-          </p>
-          <p className="text-gray-700 mb-4">
-            <strong>Connections:</strong> {partner.partnerCount}
-          </p>
-          <button
-            onClick={handleSendRequest}
-            className="btn btn-primary text-white"
-          >
-            Send Partner Request
-          </button>
+    <div>
+      <Navbar></Navbar>
+      <div className="py-10 px-4 md:px-20 bg-base-100">
+        <ToastContainer></ToastContainer>
+        <div className="max-w-4xl mx-auto bg-base-200 shadow-lg rounded-lg p-6 flex flex-col md:flex-row gap-6">
+          <img
+            src={partner.photoURL}
+            alt={partner.name}
+            className="w-48 h-48 rounded-full object-cover mx-auto md:mx-0"
+          />
+          <div className="flex-1">
+            <h2 className="text-3xl font-bold mb-2">{partner.name}</h2>
+            <p className="text-gray-600 mb-1">
+              <strong>Subject:</strong> {partner.subject}
+            </p>
+            <p className="text-gray-600 mb-1">
+              <strong>Study Mode:</strong> {partner.studyMode}
+            </p>
+            <p className="text-gray-600 mb-1">
+              <strong>Experience Level:</strong> {partner.experienceLevel}
+            </p>
+            <p className="text-gray-600 mb-1">
+              <strong>Availability:</strong> {partner.availability}
+            </p>
+            <p className="text-gray-600 mb-1">
+              <strong>Location:</strong> {partner.location || "N/A"}
+            </p>
+            <p className="text-yellow-500 font-semibold mb-3">
+              ⭐ {partner.rating.toFixed(1)}
+            </p>
+            <p className="text-gray-700 mb-4">
+              <strong>Connections:</strong> {partner.partnerCount}
+            </p>
+            <button
+              onClick={handleSendRequest}
+              className="btn btn-primary text-white"
+            >
+              Send Partner Request
+            </button>
+          </div>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 };

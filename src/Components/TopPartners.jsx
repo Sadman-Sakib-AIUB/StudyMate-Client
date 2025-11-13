@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import useAxios from "../Hooks/useAxios";
 import { toast } from "react-toastify";
 
@@ -57,12 +57,12 @@ const TopPartners = () => {
             <p className="text-yellow-500 font-semibold mb-3">
               ⭐ {partner.rating.toFixed(1)}
             </p>
-            <button
+            <Link
               className="btn btn-primary btn-sm"
-              onClick={() => navigate(`/partner/${partner._id}`)}
+              to={`/partner/${partner._id}`}
             >
               View Profile
-            </button>
+            </Link>
           </div>
         ))}
       </div>
